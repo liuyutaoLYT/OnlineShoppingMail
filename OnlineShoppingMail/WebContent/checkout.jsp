@@ -130,11 +130,11 @@
                                         <ul>
                                             <li><a href="${pageContext.request.contextPath}/#">My Account <i class="fa fa-angle-down"></i></a>
                                                 <ul class="submenu-mainmenu">
-                                                    <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>Login</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/tologin"><i class="fa fa-circle"></i>Login</a></li>
                                                     <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>My Account</a></li>
                                                     <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>My Wishlist</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/cart.html"><i class="fa fa-circle"></i>My Cart</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checkout.html"><i class="fa fa-circle"></i>Checkout</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/show"><i class="fa fa-circle"></i>My Cart</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/indent"><i class="fa fa-circle"></i>Checkout</a></li>
                                                 </ul>
                                             </li>
                                             <li class="currency"><a href="${pageContext.request.contextPath}/#">USD <i class="fa fa-angle-down"></i></a>
@@ -169,9 +169,9 @@
                                     <div class="top-right">
                                         <div class="top-login-cart">
                                             <ul>
-                                                <li class=" hidden-xs"><a href="${pageContext.request.contextPath}/#">Login or Register</a></li>
-                                                <li class=" hidden-xs"><a href="${pageContext.request.contextPath}/checkout.html">Checkout</a></li>
-                                                <li><a href="${pageContext.request.contextPath}/cart.html"><img src="${pageContext.request.contextPath}/img/icon/cart_red.png" alt="cart">Cart (3)</a>
+                                                <li class=" hidden-xs"><a href="/OnlineShoppingMail/product/tologin">Login or Register</a></li>
+                                                <li class=" hidden-xs"><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
+                                                <li><a href="/OnlineShoppingMail/product/show"><img src="${pageContext.request.contextPath}/img/icon/cart_red.png" alt="cart">Cart (3)</a>
                                                     <ul class="submenu-mainmenu">
                                                         <li class="single-cart-item clearfix">
                                                             <span class="cart-img">
@@ -212,8 +212,8 @@
                                                         <li>
                                                             <span class="sub-total-cart text-center">
                                                                 Sub Total <span>$620</span>
-                                                                <a href="${pageContext.request.contextPath}/cart.html" class="view-cart active">View Cart</a>
-                                                                <a href="${pageContext.request.contextPath}/checkout.html" class="view-cart">Checkout</a>
+                                                                <a href="/OnlineShoppingMail/product/show" class="view-cart active">View Cart</a>
+                                                                <a href="/OnlineShoppingMail/product/indent" class="view-cart">Checkout</a>
                                                             </span>
                                                         </li>    
                                                     </ul>
@@ -230,7 +230,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="header-logo">
-                                        <a href="${pageContext.request.contextPath}/index.html"><img src="${pageContext.request.contextPath}/img/logo/1.png" alt="shofixe"></a>
+                                        <a href="/OnlineShoppingMail/product/index"><img src="${pageContext.request.contextPath}/img/logo/1.png" alt="shofixe"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 hidden-sm hidden-xs">
@@ -258,8 +258,9 @@
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="search-box">
                                         <img src="${pageContext.request.contextPath}/img/icon/search.png" alt="">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search...">
+                                       <form action="/OnlineShoppingMail/product/search" method="post">
+                                            <input type="text" name = "productname" placeholder="Search..."><input type = "submit" value="搜索">
+                                            
                                         </form>
                                     </div>
                                 </div>
@@ -270,10 +271,10 @@
                         <nav>
                             <div class="mainmenu">
                                 <ul>
-                                    <li><a href="${pageContext.request.contextPath}/index.html">Home</a></li>
-									<li><a href="${pageContext.request.contextPath}/shop.html">Shop</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/cart.html">Cart</a></li>
-									<li><a href="${pageContext.request.contextPath}/checkout.html">Checkout</a></li>
+                                    <li><a href="/OnlineShoppingMail/product/index">Home</a></li>
+									<li><a href="/OnlineShoppingMail/product/view">Shop</a></li>
+                                    <li><a href="/OnlineShoppingMail/product/show">Cart</a></li>
+									<li><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
 									<li><a href="${pageContext.request.contextPath}/contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -287,10 +288,10 @@
                                     <div class="mobile-menu">
                                         <nav id="dropdown">
                                             <ul>
-                                                <li><a href="${pageContext.request.contextPath}/index.html">Home</a></li>
-												<li><a href="${pageContext.request.contextPath}/shop.html">Shop</a></li>
-												<li><a href="${pageContext.request.contextPath}/cart.html">Cart</a></li>
-												<li><a href="${pageContext.request.contextPath}/checkout.html">Checkout</a></li>
+                                                <li><a href="/OnlineShoppingMail/product/index">Home</a></li>
+												<li><a href="/OnlineShoppingMail/product/view">Shop</a></li>
+												<li><a href="/OnlineShoppingMail/product/show">Cart</a></li>
+												<li><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
 												<li><a href="${pageContext.request.contextPath}/contact.html">Contact</a></li>
                                             </ul>
                                         </nav>
@@ -313,8 +314,8 @@
                                     </div>
                                     <div class="breadcrumbs">
                                         <ul>
-                                            <li class="text-capitalize"><a href="${pageContext.request.contextPath}/index.html">Home</a> ></li>
-                                            <li class="text-capitalize"><a href="${pageContext.request.contextPath}/shop.html">shop</a> ></li>
+                                            <li class="text-capitalize"><a href="/OnlineShoppingMail/product/index">Home</a> ></li>
+                                            <li class="text-capitalize"><a href="/OnlineShoppingMail/product/view">shop</a> ></li>
                                             <li class="text-capitalize">checkout</li>
                                         </ul>
                                     </div>
@@ -331,8 +332,8 @@
                             <div class="col-md-12">
                                 <div class="cart-tab-menu section-tab-menu pb-50 text-center">
                                     <ul>
-                                        <li class="text-uppercase"><a href="${pageContext.request.contextPath}/cart.html">Shopping Cart</a></li>
-                                        <li class="text-uppercase active"><a href="${pageContext.request.contextPath}/checkout.html">Checkout</a></li>
+                                        <li class="text-uppercase"><a href="/OnlineShoppingMail/product/show">Shopping Cart</a></li>
+                                        <li class="text-uppercase active"><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
                                         <li class="text-uppercase"><a href="${pageContext.request.contextPath}/#">Order Complete</a></li>
                                     </ul>
                                 </div>
@@ -344,48 +345,48 @@
                                     <div class="section-title">
                                         <h4 class="text-uppercase mb-35">Billing detail</h4>
                                     </div>    
-                                    <form action="/OnlineShoppingMail/product/indent" method="get" ">
+                                    <form action="/OnlineShoppingMail/product/addindent" method="get" ">
                                         <p>Country <span>*</span><br>
-                                       		<input type="text" name = "country" value="${in.country }">
+                                       		<input type="text" name = "country" value="${i.country }">
                                         </p>
                                         <div class="row">
                                             <p class="col-sm-6 col-xs-12">
                                                 First Name <span>*</span><br>
-                                                <input type="text" placeholder="First name" name ="firstname" value = "${in.firstname }">
+                                                <input type="text" placeholder="First name" name ="firstname" value = "${i.firstname }">
                                             </p>
                                             <p class="col-sm-6 col-xs-12">
                                                 Last Name <span>*</span><br>
-                                                <input type="text" placeholder="Last name" name = "lastname" value="${in.lastname }">
+                                                <input type="text" placeholder="Last name" name = "lastname" value="${i.lastname }">
                                             </p>
                                         </div>
                                         <p>Company Name <span>*</span><br>
-                                        <input type="text" placeholder="Company name" name = "companyname" value = "${in.companyname }">
+                                        <input type="text" placeholder="Company name" name = "companyname" value = "${i.companyname }">
                                         </p>
                                         <div class="row">
                                             <p class="col-sm-6 col-xs-12">
                                                 Email Address <span>*</span><br>
-                                                <input type="text" placeholder="Email address" name = "emailaddress" value = "${in.emailaddress }">
+                                                <input type="text" placeholder="Email address" name = "emailaddress" value = "${i.emailaddress }">
                                             </p>
                                             <p class="col-sm-6 col-xs-12">
                                                 Phone No. <span>*</span><br>
-                                                <input type="text" placeholder="Phone no." name = "phonenum" value = "${in.phonenum }">
+                                                <input type="text" placeholder="Phone no." name = "phonenum" value = "${i.phonenum }">
                                             </p>
                                         </div>
                                         <p id="address">Address <span>*</span><br>
-                                        <input type="text" placeholder="Address" name="address" value = "${in.address }">
+                                        <input type="text" placeholder="Address" name="address" value = "${i.address }">
                                        
                                         </p>
                                         <p>Town/City <span>*</span><br>
-                                        <input type="text" placeholder="Town/City" name="city" value = "${in.city }">
+                                        <input type="text" placeholder="Town/City" name="city" value = "${i.city }">
                                         </p>
                                         <div class="row">
                                             <p class="col-sm-6 col-xs-12">
                                                 State <span>*</span><br>
-                                                <input type="text" placeholder="State" name = "state" value = "${in.state }">
+                                                <input type="text" placeholder="State" name = "state" value = "${i.state }">
                                             </p>
                                             <p class="col-sm-6 col-xs-12">
                                                 Zip Code <span>*</span><br>
-                                                <input type="text" placeholder="Zip Code" name="zipcode" value = "${in.zipcode }">
+                                                <input type="text" placeholder="Zip Code" name="zipcode" value = "${i.zipcode }">
                                             </p>
                                         </div>
                                         <div class="account-address">
@@ -409,20 +410,29 @@
                                         <div class="order-table">
                                             <ul>
                                                 <li>
-                                                 <c:forEach items="${cartlist }" var="c">
-                                                    <h5 class="focus">  <span>Total</span></h5>
-                                                    <p>${  i=c.count * c.product.discountprice+i }   <span> x  ${c.count }</span><span>${list.product.discountprice*list.count }</span></p>
+                                                <h5 class="focus">  <span>Total</span></h5>
+                                                 <c:forEach items="${lc }" var="c">
+                                                    
+                                                    
+                                               
+                                                	
+                                                	
+                                                    <p>${c.productname }   <span> x  ${c.productcount }</span><span>${  i=c.productcount * c.productprice }</span></p>
                                                     
                                                     </c:forEach>
                                                 </li>
-                                                <li>
-                                                    <h5>Sub total <span>$620.00</span></h5>
+                                                <li><c:set var="i" value="0" scope="page"></c:set>
+                                                <c:forEach items="${lc }" var="c">
+                                                	<span  style="display:none">${  i=c.productcount * c.productprice+i }</span>
+                                                	</c:forEach>
+                                               </span>
+                                                    <h5>Sub total <span>${i }</span></h5>
                                                 </li>
                                                 <li>
                                                     <h5>Shipping <span>$0.00</span></h5>
                                                 </li>
                                                 <li class="order-total-purple">
-                                                    <h5 class="focus">Grand Total <span>$620.00</span></h5>
+                                                    <h5 class="focus">Grand Total <span>${i }</span></h5>
                                                 </li>
                                             </ul>
                                         </div>
@@ -670,7 +680,7 @@
                                     <div class="footer-widget">
                                         <h5>Company</h5>
                                         <ul>
-                                            <li><a href="${pageContext.request.contextPath}/index.html"><i class="fa fa-circle"></i>Home</a></li>
+                                            <li><a href="/OnlineShoppingMail/product/index"><i class="fa fa-circle"></i>Home</a></li>
                                             <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>About us</a></li>
                                             <li><a href="${pageContext.request.contextPath}/contact.html"><i class="fa fa-circle"></i>Contact us</a></li>
                                             <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>Our blog</a></li>
@@ -698,7 +708,7 @@
                                         <ul>
                                             <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>Payment option</a></li>
                                             <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>Shipping</a></li>
-                                            <li><a href="${pageContext.request.contextPath}/checkout.html"><i class="fa fa-circle"></i>Checkout</a></li>
+                                            <li><a href="/OnlineShoppingMail/product/indent"><i class="fa fa-circle"></i>Checkout</a></li>
                                             <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>Discount</a></li>
                                             <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>Sitemap</a></li>
                                             <li><a href="${pageContext.request.contextPath}/#"><i class="fa fa-circle"></i>Service</a></li>

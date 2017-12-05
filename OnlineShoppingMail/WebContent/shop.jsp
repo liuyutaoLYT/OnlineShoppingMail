@@ -98,6 +98,7 @@
         <link rel="alternate stylesheet" type="text/css" href="${pageContext.request.contextPath}/switcher/background4.css" title="background4" media="screen" />
         <link rel="alternate stylesheet" type="text/css" href="${pageContext.request.contextPath}/switcher/background5.css" title="background5" media="screen" />
         <!-- Color Css Files End -->
+        
     </head>
     <body>
 
@@ -131,11 +132,11 @@
                                         <ul>
                                             <li><a href="#">My Account <i class="fa fa-angle-down"></i></a>
                                                 <ul class="submenu-mainmenu">
-                                                    <li><a href="#"><i class="fa fa-circle"></i>Login</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/tologin"><i class="fa fa-circle"></i>Login</a></li>
                                                     <li><a href="#"><i class="fa fa-circle"></i>My Account</a></li>
                                                     <li><a href="#"><i class="fa fa-circle"></i>My Wishlist</a></li>
                                                     <li><a href="/OnlineShoppingMail/product/show?id=${p.productid }"><i class="fa fa-circle"></i>My Cart</a></li>
-                                                    <li><a href="checkout.html"><i class="fa fa-circle"></i>Checkout</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/indent"><i class="fa fa-circle"></i>Checkout</a></li>
                                                 </ul>
                                             </li>
                                             <li class="currency"><a href="#">USD <i class="fa fa-angle-down"></i></a>
@@ -170,9 +171,9 @@
                                     <div class="top-right">
                                         <div class="top-login-cart">
                                             <ul>
-                                                <li class=" hidden-xs"><a href="#">Login or Register</a></li>
-                                                <li class=" hidden-xs"><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="cart.html"><img src="${pageContext.request.contextPath}/img/icon/cart_red.png" alt="cart">Cart (3)</a>
+                                                <li class=" hidden-xs"><a href="/OnlineShoppingMail/product/tologin">Login or Register</a></li>
+                                                <li class=" hidden-xs"><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
+                                                <li><a href="/OnlineShoppingMail/product/show?id=${p.productid }"><img src="${pageContext.request.contextPath}/img/icon/cart_red.png" alt="cart">Cart (3)</a>
                                                     <ul class="submenu-mainmenu">
                                                         <li class="single-cart-item clearfix">
                                                             <span class="cart-img">
@@ -213,8 +214,8 @@
                                                         <li>
                                                             <span class="sub-total-cart text-center">
                                                                 Sub Total <span>$620</span>
-                                                                <a href="cart.html" class="view-cart active">View Cart</a>
-                                                                <a href="checkout.html" class="view-cart">Checkout</a>
+                                                                <a href="/OnlineShoppingMail/product/show?id=${p.productid }" class="view-cart active">View Cart</a>
+                                                                <a href="/OnlineShoppingMail/product/indent" class="view-cart">Checkout</a>
                                                             </span>
                                                         </li>    
                                                     </ul>
@@ -231,7 +232,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="header-logo">
-                                        <a href="index.html"><img src="${pageContext.request.contextPath}/img/logo/1.png" alt="shofixe"></a>
+                                        <a href="/OnlineShoppingMail/product/index"><img src="${pageContext.request.contextPath}/img/logo/1.png" alt="shofixe"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 hidden-sm hidden-xs">
@@ -259,8 +260,9 @@
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="search-box">
                                         <img src="${pageContext.request.contextPath}/img/icon/search.png" alt="">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search...">
+                                        <form action="/OnlineShoppingMail/product/search" method="post">
+                                            <input type="text" name = "productname" placeholder="Search..."><input type = "submit" value="搜索">
+                                            
                                         </form>
                                     </div>
                                 </div>
@@ -271,10 +273,10 @@
                         <nav>
                             <div class="mainmenu">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-									<li><a href="shop.html">Shop</a></li>
+                                    <li><a href="/OnlineShoppingMail/product/index">Home</a></li>
+									<li><a href="/OnlineShoppingMail/product/view">Shop</a></li>
                                     <li><a href="/OnlineShoppingMail/product/show">Cart</a></li>
-									<li><a href="checkout.html">Checkout</a></li>
+									<li><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
 									<li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -288,10 +290,10 @@
                                     <div class="mobile-menu">
                                         <nav id="dropdown">
                                             <ul>
-                                                <li><a href="index.html">Home</a></li>
-												<li><a href="shop.html">Shop</a></li>
-												<li><a href="cart.html">Cart</a></li>
-												<li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="/OnlineShoppingMail/product/index">Home</a></li>
+												<li><a href="/OnlineShoppingMail/product/view">Shop</a></li>
+												<li><a href="/OnlineShoppingMail/product/show?id=${p.productid }">Cart</a></li>
+												<li><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
 												<li><a href="contact.html">Contact</a></li>
                                             </ul>
                                         </nav>
@@ -314,7 +316,7 @@
                                     </div>
                                     <div class="breadcrumbs">
                                         <ul>
-                                            <li><a href="index.html">Home</a> ></li>
+                                            <li><a href="/OnlineShoppingMail/product/index">Home</a> ></li>
                                             <li class="text-capitalize">shop</li>
                                         </ul>
                                     </div>
@@ -394,7 +396,7 @@
                                             	
                                                 <div class="single-product-img clearfix">
                                                     <a href="product?id=${p.productid }">
-                                                        <img class="primary-image" src="${pageContext.request.contextPath}/img/product/1.jpg" alt="">
+                                                        <img class="primary-image" src="${pageContext.request.contextPath}/${p.productimg}" alt="">
                                                     </a>
                                                     <div class="wish-icon-hover text-center clearfix">
                                                         <div class="hover-text">
@@ -428,11 +430,12 @@
                                                 </div>
                                                  
                                             </div>
-                                            </c:forEach>
                                             <div class="new-sale">
                                                 <span class="black hidden-sm">new</span>
                                                 <span class="red hidden-sm">hot</span>
-                                            </div>    
+                                            </div>
+                                            </c:forEach>
+                                               
                                         </div>
                                   
                                </div>
@@ -675,7 +678,7 @@
                                     <div class="footer-widget">
                                         <h5>Company</h5>
                                         <ul>
-                                            <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+                                            <li><a href="/OnlineShoppingMail/product/index"><i class="fa fa-circle"></i>Home</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>About us</a></li>
                                             <li><a href="contact.html"><i class="fa fa-circle"></i>Contact us</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Our blog</a></li>
@@ -703,7 +706,7 @@
                                         <ul>
                                             <li><a href="#"><i class="fa fa-circle"></i>Payment option</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Shipping</a></li>
-                                            <li><a href="checkout.html"><i class="fa fa-circle"></i>Checkout</a></li>
+                                            <li><a href="/OnlineShoppingMail/product/indent"><i class="fa fa-circle"></i>Checkout</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Discount</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Sitemap</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Service</a></li>
@@ -767,7 +770,7 @@
                                     <div class="price-box">
                                         <p class="price"><span class="special-price"><span class="amount">$132.00</span></span></p>
                                     </div>
-                                    <a href="shop.html" class="see-all">See all features</a>
+                                    <a href="/OnlineShoppingMail/product/view" class="see-all">See all features</a>
                                     <div class="quick-add-to-cart">
                                         <form method="post" class="cart">
                                             <div class="numbers-row">

@@ -1,4 +1,4 @@
-package com.onlineShoppingMail.service;
+package com.onlineShoppingMail.entity;
 
 import java.util.List;
 
@@ -7,13 +7,13 @@ import java.util.List;
  * Description: <br />
  * Project: abc <br />
  * ClassName: Page <br />
- * @author wangwei
- * @version 1.0 2014年10月21日下午3:11:27
+ * @author liuyutao
+ * @version 1.0 2017年10月14日下午3:11:27
  *
  * @param <T>
  */
 public class Page<T> {
-	private List<T> list;
+	private List<ProductEntity> list;
 	private int currentPageNum;
 	private int pageSize;
 	private int prePageNum;
@@ -28,10 +28,10 @@ public class Page<T> {
 		this.pageSize=pageSize;
 	}
 	
-	public List<T> getList() {
+	public List<ProductEntity> getList() {
 		return list;
 	}
-	public void setList(List<T> list) {
+	public void setList(List<ProductEntity> list) {
 		this.list = list;
 	}
 	public int getCurrentPageNum() {

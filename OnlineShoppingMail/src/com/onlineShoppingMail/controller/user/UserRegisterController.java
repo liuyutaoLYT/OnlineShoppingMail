@@ -36,9 +36,9 @@ public class UserRegisterController {
 	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public String register (@RequestParam("userName") String userName,
-			@RequestParam("password") String password ,
-			@RequestParam("email") String useremail,userentity userentity,@RequestParam("file") CommonsMultipartFile file)
-					throws IOException {
+			@RequestParam("psw") String password ,
+			@RequestParam("email") String useremail,userentity userentity,@RequestParam("file") CommonsMultipartFile file) throws IllegalStateException, IOException
+					{
 		long  startTime=System.currentTimeMillis();
         System.out.println("fileName："+file.getOriginalFilename());
         String path="E:/"+new Date().getTime()+file.getOriginalFilename();

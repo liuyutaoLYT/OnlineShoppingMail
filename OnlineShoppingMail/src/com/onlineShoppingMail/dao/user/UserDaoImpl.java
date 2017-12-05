@@ -13,17 +13,17 @@ public class UserDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 	//用戶插入
-	
-		public void save(userentity userentity) throws Exception {
-			Session session = this.sessionFactory.openSession();
-			Transaction tx = session.beginTransaction();
-			
-			session.save(userentity);
-			
-			tx.commit();
+	public void save(userentity userentity) throws Exception {
+		Session session = this.sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
+		
+		session.save(userentity);
+		
+		tx.commit();
 
-			
-		}
+		
+	}
+
 
 		
 }

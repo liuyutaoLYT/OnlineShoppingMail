@@ -36,11 +36,13 @@
 
  
   <div class="rem_sub">
+  <form action="/OnlineShoppingMail/register/add">
   <label>
       
       <input type="submit" class="sub_button" name="register" id="register" value="注册" style="opacity: 0.7;">
       
     </label>
+    </form>
   <div class="rem_sub_l">
   <input type="checkbox" name="checkbox" id="save_me">
    <label for="checkbox">记住密码</label>

@@ -23,7 +23,7 @@ public class Cart {
 	}
 	public void deleteCart (ProductEntity p){
 		CartItem c = container.get(p.getProductid());
-		if(c.getCount()>0){
+		if(c.getCount()>1){
 			c.setCount(c.getCount()-1);
 		}else{
 			container.remove(p.getProductid());

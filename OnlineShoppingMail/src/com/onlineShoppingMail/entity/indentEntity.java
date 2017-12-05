@@ -1,16 +1,30 @@
 package com.onlineShoppingMail.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="checkout")
 public class indentEntity {
+	private int userid;
 	private String country;
 	private String firstname;
 	private String lastname;
 	private String companyname;
 	private String emailaddress;
-	private int phonenum;
+	private String phonenum;
 	private String address;
 	private String city;
 	private String state;
 	private String zipcode;
+	@Id
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
 	public String getCountry() {
 		return country;
 	}
@@ -41,10 +55,10 @@ public class indentEntity {
 	public void setEmailaddress(String emailaddress) {
 		this.emailaddress = emailaddress;
 	}
-	public int getPhonenum() {
+	public String getPhonenum() {
 		return phonenum;
 	}
-	public void setPhonenum(int phonenum) {
+	public void setPhonenum(String phonenum) {
 		this.phonenum = phonenum;
 	}
 	public String getAddress() {

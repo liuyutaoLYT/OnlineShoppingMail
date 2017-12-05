@@ -9,9 +9,9 @@ import javax.persistence.Table;
 public class ProductEntity {
 	private int productid;
 	private String productname;
-	private int originalprice;
+	private String originalprice;
 	private String productimg;
-	private int discountprice;
+	private String discountprice;
 	@Id
 	public int getProductid() {
 		return productid;
@@ -25,10 +25,10 @@ public class ProductEntity {
 	public void setProductname(String productname) {
 		this.productname = productname;
 	}
-	public int getOriginalprice() {
+	public String getOriginalprice() {
 		return originalprice;
 	}
-	public void setOriginalprice(int originalprice) {
+	public void setOriginalprice(String originalprice) {
 		this.originalprice = originalprice;
 	}
 	public String getProductimg() {
@@ -37,10 +37,10 @@ public class ProductEntity {
 	public void setProductimg(String productimg) {
 		this.productimg = productimg;
 	}
-	public int getDiscountprice() {
+	public String getDiscountprice() {
 		return discountprice;
 	}
-	public void setDiscountprice(int discountprice) {
+	public void setDiscountprice(String discountprice) {
 		this.discountprice = discountprice;
 	}
 	

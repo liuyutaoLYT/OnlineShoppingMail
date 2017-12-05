@@ -128,11 +128,11 @@
                                         <ul>
                                             <li><a href="#">My Account <i class="fa fa-angle-down"></i></a>
                                                 <ul class="submenu-mainmenu">
-                                                    <li><a href="login.jsp"><i class="fa fa-circle"></i>Login</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/tologin"><i class="fa fa-circle"></i>Login</a></li>
                                                     <li><a href="#"><i class="fa fa-circle"></i>My Account</a></li>
                                                     <li><a href="#"><i class="fa fa-circle"></i>My Wishlist</a></li>
-                                                    <li><a href="cart.html"><i class="fa fa-circle"></i>My Cart</a></li>
-                                                    <li><a href="checkout.html"><i class="fa fa-circle"></i>Checkout</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/show"><i class="fa fa-circle"></i>My Cart</a></li>
+                                                    <li><a href="/OnlineShoppingMail/product/indent"><i class="fa fa-circle"></i>Checkout</a></li>
                                                 </ul>
                                             </li>
                                             
@@ -155,9 +155,9 @@
                                     <div class="top-right">
                                         <div class="top-login-cart">
                                             <ul>
-                                                <li class=" hidden-xs"><a href="login.jsp">Login or Register</a></li>
-                                                <li class=" hidden-xs"><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="cart.html"><img src="${pageContext.request.contextPath}/img/icon/cart_red.png" alt="cart">Cart (3)</a>
+                                                <li class=" hidden-xs"><a href="/OnlineShoppingMail/product/tologin">Login or Register</a></li>
+                                                <li class=" hidden-xs"><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
+                                                <li><a href="/OnlineShoppingMail/product/show"><img src="${pageContext.request.contextPath}/img/icon/cart_red.png" alt="cart">Cart (3)</a>
                                                     <ul class="submenu-mainmenu">
                                                         <li class="single-cart-item clearfix">
                                                             <span class="cart-img">
@@ -198,8 +198,8 @@
                                                         <li>
                                                             <span class="sub-total-cart text-center">
                                                                 Sub Total <span>$620</span>
-                                                                <a href="cart.html" class="view-cart active">View Cart</a>
-                                                                <a href="checkout.html" class="view-cart">Checkout</a>
+                                                                <a href="/OnlineShoppingMail/product/show" class="view-cart active">View Cart</a>
+                                                                <a href="/OnlineShoppingMail/product/indent" class="view-cart">Checkout</a>
                                                             </span>
                                                         </li>    
                                                     </ul>
@@ -242,10 +242,11 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="search-box">
+                                    <div class="search-box">  
                                         <img src="${pageContext.request.contextPath}/img/icon/search.png" alt="">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search...">
+                                        <form action="/OnlineShoppingMail/product/search" method="post">
+                                            <input type="text" name = "productname" placeholder="Search..."><input type = "submit" value="搜索">
+                                            
                                         </form>
                                     </div>
                                 </div>
@@ -256,10 +257,10 @@
                         <nav>
                             <div class="mainmenu">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="/OnlineShoppingMail/product/index">Home</a></li>
 									<li><a href="/OnlineShoppingMail/product/view">Shop</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-									<li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="/OnlineShoppingMail/product/show">Cart</a></li>
+									<li><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
 									<li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -274,9 +275,9 @@
                                         <nav id="dropdown">
                                             <ul>
                                                 <li><a href="index.html">Home</a></li>
-												<li><a href="shop.html">Shop</a></li>
-												<li><a href="cart.html">Cart</a></li>
-												<li><a href="checkout.html">Checkout</a></li>
+												<li><a href="/OnlineShoppingMail/product/view">Shop</a></li>
+												<li><a href="/OnlineShoppingMail/product/show">Cart</a></li>
+												<li><a href="/OnlineShoppingMail/product/indent">Checkout</a></li>
 												<li><a href="contact.html">Contact</a></li>
                                             </ul>
                                         </nav>
@@ -322,7 +323,7 @@
                                                     </div>
                                                     <div class="slider-content slider-text-4 text-left hidden-sm hidden-xs">
                                                         <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s">
-                                                            <a href='#' class='slider-button'>shop now</a>
+                                                            <a href='/OnlineShoppingMail/product/view' class='slider-button'>shop now</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -358,7 +359,7 @@
                                                     </div>
                                                     <div class="slider-content slider-text-4 text-left hidden-sm hidden-xs">
                                                         <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s">
-                                                            <a href='#' class='slider-button'>shop now</a>
+                                                            <a href='/OnlineShoppingMail/product/view' class='slider-button'>shop now</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1285,7 +1286,7 @@
                                     </div>     
                                 </div>
                                 <div class="arrival-button text-center mt-30">
-                                    <a href='#' class='section-button'>View More</a>
+                                    <a href='/OnlineShoppingMail/product/view' class='section-button'>View More</a>
                                 </div>    
                             </div>
                         </div>
@@ -2448,7 +2449,7 @@
                                     </div>    
                                 </div>
                                 <div class="arrival-button text-left">
-                                    <a href='#' class='section-button mt-30'>View More</a>
+                                    <a href='/OnlineShoppingMail/product/view' class='section-button mt-30'>View More</a>
                                 </div>    
                             </div>
                         </div>
@@ -2469,7 +2470,7 @@
                                     <h4 class="text-uppercase">GET 25% OFF</h4>
                                     <h2 class="text-uppercase">MEN’S </h2>
                                     <h4 class="text-uppercase">COLLECTION </h4>
-                                    <a href="#" class="section-button">shop now</a>
+                                    <a href="/OnlineShoppingMail/product/view" class="section-button">shop now</a>
                                 </div>
                             </div>
                             <div class="single-off-banner text-center">
@@ -2482,7 +2483,7 @@
                                     <h3 class="text-uppercase">EXCLUSIVE </h3>
                                     <h2 class="text-uppercase">MEN’S &amp; WOMEN's</h2>
                                     <h3 class="text-uppercase">COLLECTION </h3>
-                                    <a href="#" class="section-button">shop now</a>
+                                    <a href="/OnlineShoppingMail/product/view" class="section-button">shop now</a>
                                 </div>
                             </div>
                             <div class="single-off-banner text-left">
@@ -2495,7 +2496,7 @@
                                     <h4 class="text-uppercase">GET 25% OFF</h4>
                                     <h2 class="text-uppercase">WOMEN’S </h2>
                                     <h4 class="text-uppercase">COLLECTION </h4>
-                                    <a href="#" class="section-button">shop now</a>
+                                    <a href="/OnlineShoppingMail/product/view" class="section-button">shop now</a>
                                 </div>
                             </div>
                         </div>
@@ -3185,7 +3186,7 @@
                                         </div>    
                                     </div> 
                                 <div class="arrival-button text-center mt-30">
-                                    <a href='#' class='section-button'>View More</a>
+                                    <a href='/OnlineShoppingMail/product/view' class='section-button'>View More</a>
                                 </div>    
                             </div>
                             <div class="col-md-5 hidden-sm hidden-xs">
@@ -3919,7 +3920,7 @@
                                         </div>    
                                     </div> 
                                 <div class="arrival-button text-center mt-30">
-                                    <a href='#' class='section-button'>View More</a>
+                                    <a href='/OnlineShoppingMail/product/view' class='section-button'>View More</a>
                                 </div>    
                             </div>
                         </div>
@@ -4232,7 +4233,7 @@
                                         <div class="testimonial-info">
                                             <h3>Zaculine Jenelia, <span> Head Of Business</span></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing    elit, sed do eiusmod tempor incididunt ut labore et lore magna aliqua. Ut enim ad minim veniam quis</p>
-                                            <a href="#" class="section-button mt-30">view more</a>
+                                            <a href="/OnlineShoppingMail/product/view" class="section-button mt-30">view more</a>
                                         </div>
                                     </div>
                                     <div class="testimonial-right">
@@ -4242,7 +4243,7 @@
                                         <div class="testimonial-info">
                                             <h3>Zaculine Jenelia, <span> Head Of Business</span></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing    elit, sed do eiusmod tempor incididunt ut labore et lore magna aliqua. Ut enim ad minim veniam quis</p>
-                                            <a href="#" class="section-button mt-30">view more</a>
+                                            <a href="/OnlineShoppingMail/product/view" class="section-button mt-30">view more</a>
                                         </div>
                                     </div>
                                     <div class="testimonial-right">
@@ -4252,7 +4253,7 @@
                                         <div class="testimonial-info">
                                             <h3>Zaculine Jenelia, <span> Head Of Business</span></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing    elit, sed do eiusmod tempor incididunt ut labore et lore magna aliqua. Ut enim ad minim veniam quis</p>
-                                            <a href="#" class="section-button mt-30">view more</a>
+                                            <a href="/OnlineShoppingMail/product/view" class="section-button mt-30">view more</a>
                                         </div>
                                     </div>
                                 </div>    
@@ -4341,7 +4342,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="client-button text-center pt-35">
-                                    <a href='#' class='section-button'>View More</a>
+                                    <a href='/OnlineShoppingMail/product/view' class='section-button'>View More</a>
                                 </div>
                             </div>
                         </div>
@@ -4523,7 +4524,7 @@
                                         <ul>
                                             <li><a href="#"><i class="fa fa-circle"></i>Payment option</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Shipping</a></li>
-                                            <li><a href="checkout.html"><i class="fa fa-circle"></i>Checkout</a></li>
+                                            <li><a href="/OnlineShoppingMail/product/indent"><i class="fa fa-circle"></i>Checkout</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Discount</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Sitemap</a></li>
                                             <li><a href="#"><i class="fa fa-circle"></i>Service</a></li>
@@ -4588,7 +4589,7 @@
                                     <div class="price-box">
                                         <p class="price"><span class="special-price"><span class="amount">$132.00</span></span></p>
                                     </div>
-                                    <a href="shop.html" class="see-all">See all features</a>
+                                    <a href="/OnlineShoppingMail/product/view" class="see-all">See all features</a>
                                     <div class="quick-add-to-cart">
                                         <form method="post" class="cart">
                                             <div class="numbers-row">
