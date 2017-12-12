@@ -31,12 +31,40 @@ public class ProductServiceImpl {
 		return l;
 		
 	}
+	public List<userentity> findAlluser(){
+		List<userentity> l = this.productDaoImpl.findAlluser();
+		
+		return l;
+		
+	}
+	public List<cartEntity> findAllcart(){
+		List<cartEntity> l = this.productDaoImpl.findAllCarEntity();
+		
+		return l;
+		
+	}
 	public List<cartEntity> findByUserId( int userid){
 		List<cartEntity> lc = (List<cartEntity>) this.productDaoImpl.findByUserId(userid);
 		return lc;
 	}
 	public List<ProductEntity> findByname(String productname){
 		List<ProductEntity> l = this.productDaoImpl.findByName(productname);
+		return l;
+	}
+	public List<userentity> findByusername(String username){
+		List<userentity> l = this.productDaoImpl.findByusername(username);
+		return l;
+	}
+	public ProductEntity findByid(int productid){
+		ProductEntity l = this.productDaoImpl.findById(productid);
+		return l;
+	}
+	public cartEntity findBycartid(int cartid){
+		cartEntity l = this.productDaoImpl.findBycartId(cartid);
+		return l;
+	}
+	public userentity findByuserid(int userid){
+		userentity l = this.productDaoImpl.findByUserid1(userid);
 		return l;
 	}
 	@Transactional(readOnly=true)
@@ -77,6 +105,33 @@ public class ProductServiceImpl {
 		
 		List<cartEntity> lcc = this.productDaoImpl.findByUserId(userid);
 		this.productDaoImpl.empty(lcc);
+		
+	}
+	public void deleteproduct(ProductEntity p) {
+		
+		this.productDaoImpl.deleteproduct(p);
+		
+	}
+	public void deleted(cartEntity p) {
+		
+		this.productDaoImpl.deleted(p);
+		
+	}
+	public void deleteu(userentity p) {
+		
+		this.productDaoImpl.deleteu(p);
+		
+	}
+
+	public void emptyu(int id) {
+		userentity u =this.productDaoImpl.findByUserid1(id);
+		this.productDaoImpl.deleteu(u);
+		
+	}
+	public void emptypro() {
+		
+		List<ProductEntity> lcc = this.productDaoImpl.findAll();
+		this.productDaoImpl.emptypro(lcc);
 		
 	}
 	public indentEntity findByUseridi(int userid){
@@ -123,6 +178,15 @@ public class ProductServiceImpl {
 		iden.setUserid(userid);
 		this.productDaoImpl.updatei(iden);
 	}
+	public void updateproduct(String productname,String originalprice,String discountprice,int productid,String productimg){
+		ProductEntity p = new ProductEntity();
+		p.setDiscountprice(discountprice);
+		p.setOriginalprice(originalprice);
+		p.setProductimg(productimg);
+		p.setProductname(productname);
+		p.setProductid(productid);
+		this.productDaoImpl.updateproduct(p);
+	}
 	public Page<ProductEntity> page(String pageNum1){
 		String pageNum=pageNum1;
 		int num=0;
@@ -140,6 +204,7 @@ public class ProductServiceImpl {
 		p.setTotalCount(count);
 		return p;
 	}
+	@Transactional(readOnly=true)
 	public void addproductlist(ProductEntity productEntity){
 		try {
 			this.productDaoImpl.addproductlist(productEntity);

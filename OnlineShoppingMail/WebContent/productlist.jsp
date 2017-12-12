@@ -102,10 +102,9 @@
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
     <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="${pageContext.request.contextPath}/#">商品管理</a></h3>
-      <h3 class="am-icon-cart-plus"><em></em> <a href="${pageContext.request.contextPath}/#"> 订单管理</a></h3>
-      <h3 class="am-icon-users"><em></em> <a href="${pageContext.request.contextPath}/#">会员管理</a></h3>
-      <h3 class="am-icon-volume-up"><em></em> <a href="${pageContext.request.contextPath}/#">信息通知</a></h3>
+      <h3 class="am-icon-flag"><em></em> <a href="/OnlineShoppingMail/product/toshowproduct?pageNum=1">商品管理</a></h3>
+      <h3 class="am-icon-cart-plus"><em></em> <a href="/OnlineShoppingMail/product/viewuser"> 订单管理</a></h3>
+      <h3 class="am-icon-users"><em></em> <a href="/OnlineShoppingMail/product/viewu">会员管理</a></h3>
     </div>
     <!-- sideMenu End --> 
     
@@ -154,7 +153,7 @@
       <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="${pageContext.request.contextPath}/#">商品列表</a></dl>
       
       <dl>
-        <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> 添加产品</button>
+        <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus" onclick="javascript:window.location.href='/OnlineShoppingMail/product/addproductlist'"> 添加产品</button>
       </dl>
       
       
@@ -181,8 +180,10 @@
       <div class="am-btn-group am-btn-group-xs">
       </div>
     </li>
-    <li><input type="text" class="am-form-field am-input-sm am-input-xm" placeholder="关键词搜索" /></li>
-    <li><button type="button" class="am-btn am-radius am-btn-xs am-btn-success" style="margin-top: -1px;">搜索</button></li>
+    <form action="/OnlineShoppingMail/product/searchp" method="post">
+	    <li><input type="text" class="am-form-field am-input-sm am-input-xm" placeholder="关键词搜索" name = "productname"/></li>
+	    <li><input type="submit" value="搜索" /></li>
+  	</form>
   </ul>
 </div>
 
@@ -207,9 +208,8 @@
                 <td>${p.discountprice }</td>
                 <td><div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
-                      <button class="am-btn am-btn-default am-btn-xs am-text-secondary am-round"><span class="am-icon-pencil-square-o"></span></button>
-                      <button class="am-btn am-btn-default am-btn-xs am-text-warning  am-round"><span class="am-icon-copy"></span></button>
-                      <button class="am-btn am-btn-default am-btn-xs am-text-danger am-round"><span class="am-icon-trash-o"></span></button>
+                    	<a href="/OnlineShoppingMail/product/toup?productid=${p.productid }">修改</a>
+                    	<a href="/OnlineShoppingMail/product/deleteproduct?productid=${p.productid }">删除</a>
                     </div>
                   </div></td>
                   </tr>
@@ -218,9 +218,8 @@
           </table>
           
                  <div class="am-btn-group am-btn-group-xs">
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 全部删除</button>
+              <button type="button" class="am-btn am-btn-default" onclick="javascript:window.location.href='/OnlineShoppingMail/product/addproductlist'"><span class="am-icon-plus"></span> 新增</button>
+              <button type="button" class="am-btn am-btn-default" onclick="javascript:window.location.href='/OnlineShoppingMail/product/emptypro'"><span class="am-icon-trash-o"></span> 全部删除</button>
             </div>
           
           <ul class="am-pagination am-fr">

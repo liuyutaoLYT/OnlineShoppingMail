@@ -36,7 +36,7 @@
 
  
   <div class="rem_sub">
-  <form action="/OnlineShoppingMail/register/add">
+  <form action="/OnlineShoppingMail/register/toadd" method="post">
   <label>
       
       <input type="submit" class="sub_button" name="register" id="register" value="注册" style="opacity: 0.7;">

@@ -33,7 +33,10 @@ public class UserRegisterController {
 	private registerServiceimpl registerServiceImpl;
 	@Resource
 	private loginServiceImpl loginServiceImpl;
-	
+	@RequestMapping(value="/toadd", method=RequestMethod.POST)
+	public String toregist(){
+		return "regist";
+	}
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public String register (@RequestParam("userName") String userName,
 			@RequestParam("psw") String password ,
@@ -58,7 +61,7 @@ public class UserRegisterController {
 //		if (s == "该用户可以注册" ){
 //			this.registerServiceImpl.registerUser(userentity);
 //		}
-		return "regist";
+		return "login";
 	}
 
 	@RequestMapping(value="/checkemail", method=RequestMethod.POST)

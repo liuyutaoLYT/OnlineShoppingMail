@@ -102,10 +102,9 @@
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
     <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="${pageContext.request.contextPath}/#">商品管理</a></h3>
-      <h3 class="am-icon-cart-plus"><em></em> <a href="${pageContext.request.contextPath}/#"> 订单管理</a></h3>
-      <h3 class="am-icon-users"><em></em> <a href="${pageContext.request.contextPath}/#">会员管理</a></h3>
-      <h3 class="am-icon-volume-up"><em></em> <a href="${pageContext.request.contextPath}/#">信息通知</a></h3>
+      <h3 class="am-icon-flag"><em></em> <a href="/OnlineShoppingMail/product/toshowproduct?pageNum=1">商品管理</a></h3>
+      <h3 class="am-icon-cart-plus"><em></em> <a href="/OnlineShoppingMail/product/viewuser"> 订单管理</a></h3>
+      <h3 class="am-icon-users"><em></em> <a href="/OnlineShoppingMail/product/viewu">会员管理</a></h3>
     </div>
     <!-- sideMenu End --> 
     
@@ -151,7 +150,7 @@
     <div class="listbiaoti am-cf">
       <ul class="am-icon-flag on"> 栏目名称</ul>
       
-      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="${pageContext.request.contextPath}/#">添加商品</a></dl>
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="/OnlineShoppingMail/product/addproductlist">添加商品</a></dl>
       
       <dl>
       </dl>
@@ -186,25 +185,24 @@
 </div>
 
 
-    
+     <form action="/OnlineShoppingMail/product/addproductlist" method="post" enctype="multipart/form-data">
           <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
             <thead>
               <tr class="am-success">
                 <th width="163px class="table-id" ">名称</th>
                 <th class="table-title">原价</th>
                 <th class="table-type">折扣价</th>
-                <th width="163px" class="table-set">上传图片</th>
+                <th class="table-type">文件上传</th>
               </tr>
             </thead>
        
               
-              <form action="/OnlineShoppingMail/product/addproductlist" method="post">
-                <input type="text" name = "productname"/>
-                <input type="text" name = "originalprice"/>
-                <input type="text" name = "discountprice"/>
-                <input type="file" name="file"/>
-                <input type="submit" value="保存">
-               </form>
+             
+                <td><input type="text" name = "productname"/></td>
+               <td> <input type="text" name = "originalprice"/></td>
+               <td> <input type="text" name = "discountprice"/></td>
+                 <td> <input type="file" name = "file"/></td>
+               
               </tr>
            
              
@@ -213,9 +211,9 @@
                  <div class="am-btn-group am-btn-group-xs">
             
             </div>
-           
+           <input type="submit" value="保存">
           
-          
+          </form>
       
           <hr />
         

@@ -97,11 +97,10 @@
     <div class="sideMenu">
       <h3 class="am-icon-flag"><em></em> <a href="/OnlineShoppingMail/product/toshowproduct?pageNum=1">商品管理</a></h3>
       
-      <h3 class="am-icon-cart-plus"><em></em> <a href="${pageContext.request.contextPath}/#"> 订单管理</a></h3>
+      <h3 class="am-icon-cart-plus"><em></em> <a href="/OnlineShoppingMail/product/viewuser"> 订单管理</a></h3>
      
-      <h3 class="am-icon-users"><em></em> <a href="${pageContext.request.contextPath}/#">会员管理</a></h3>
+      <h3 class="am-icon-users"><em></em> <a href="/OnlineShoppingMail/product/viewu">会员管理</a></h3>
      
-      <h3 class="am-icon-volume-up"><em></em> <a href="${pageContext.request.contextPath}/#">信息通知</a></h3>
       
      
     </div>
